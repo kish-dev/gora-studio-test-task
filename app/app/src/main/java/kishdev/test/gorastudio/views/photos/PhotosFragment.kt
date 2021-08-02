@@ -50,6 +50,7 @@ class PhotosFragment : Fragment() {
 
         val toolbar = activity as ToolbarManager
         if (ConnectiveManager.isConnectionExist(requireContext())) {
+            toolbar.internetConnectionAvailable()
             toolbar.setPreviousTitle("Users")
             toolbar.setTitle("Photos")
             toolbar.setVisibilities(buttonBack = true, previousTitle = true, title = true)
